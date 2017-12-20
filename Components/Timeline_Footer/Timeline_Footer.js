@@ -5,26 +5,27 @@ import Icon from 'react-native-vector-icons/Feather';
 export default class Timeline_Footer extends Component {
   render() {
     return (
-     <Container>
+       
          <Footer style={{backgroundColor:'#ffffff'}}>
+         <Content>
              <View
              style={
                  {
                      flexDirection:'row',
-                     alignItems:'flex-start',
+                     alignItems:'center',
                      backgroundColor:'#ffffff'
                      
                  }
              }>
 
-             <Text style={{
-                 textAlign:'left'
-             }}> All </Text>
-             <Text  style={{justifyContent:'flex-start'}}> Mentions </Text>
-             <Icon name="settings" />
-             </View>    
+             <Text style={{flex:1}}> All </Text>
+             <Text style={{flex:4}}> Mentions </Text>
+             <Icon name="settings" style={{flex:1}} />
+             </View>  
+             </Content>  
          </Footer>
-     </Container>
+         
+     
     );
   }
 
