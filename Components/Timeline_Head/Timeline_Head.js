@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Left, Container, Header, Content, Thumbnail, Text, Item, Input, Button } from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
-export default class ProfileThumb extends Component {
+export default class Timeline_Head extends Component {
   render() {
     return (
       <Header style={sty.headerstyle}>
