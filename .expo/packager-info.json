@@ -1,8 +1,8 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 9804,
+  "expoServerNgrokUrl": "https://nk-dvy.dhairyagada.htweet.exp.direct",
+  "packagerNgrokUrl": "https://packager.nk-dvy.dhairyagada.htweet.exp.direct",
+  "ngrokPid": 9268
 }
