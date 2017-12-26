@@ -3,31 +3,25 @@ import Expo from "expo";
 import {AppRegistry, Text, View} from 'react-native';
 import { Container, Content, Picker, Button } from "native-base";
 import Timeline from './Timeline/Timeline';
-
+//import { StackNavigator } from "react-navigation";
+//import SearchScreen from './SearchScreen.js';
 export default class Screen1 extends Component{
 
-  constructor() {
-    super();
-    this.state = {
-      isReady: false
-    };
-  }
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      Ionicons: require("native-base/Fonts/Ionicons.ttf")
-    });
-    this.setState({ isReady: true });
-  }
+ 
   render() {
-    if (!this.state.isReady) {
-      return <Expo.AppLoading />;
-    }
+    
     return(
       <Container>
     <Timeline/>
-
+    <Button
+            full
+            rounded
+            primary
+            style={{ marginTop: 10 }}
+            onPress={() => this.props.navigation.navigate("Search")}
+          >
+            <Text>Search</Text>
+          </Button>
     </Container>
     
     );
@@ -35,4 +29,4 @@ export default class Screen1 extends Component{
     
 }
 
-AppRegistry.registerComponent('htweet', () => htweet);
+//AppRegistry.registerComponent('htweet', () => htweet);

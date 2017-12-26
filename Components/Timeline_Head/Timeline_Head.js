@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Left, Container, Header, Content, Thumbnail, Text, Item, Input, Button } from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
+//import { StackNavigator } from "react-navigation";
+import SearchScreen from "../SearchScreen.js";
 export default class Timeline_Head extends Component {
   render() {
     return (
@@ -28,6 +30,15 @@ export default class Timeline_Head extends Component {
             <Icon name='search'style={{flex:1}}/>
             <Icon name='bell'style={{flex:1}}/>
             <Icon name='mail'style={{flex:1}}/>
+            <Button
+            full
+            rounded
+            primary
+            style={{ marginTop: 10 }}
+            onPress={() => this.props.navigation.navigate("Listo")}
+          >
+            <Text>Search</Text>
+          </Button>
           </View>
         </Content>
       </Header>

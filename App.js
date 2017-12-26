@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Expo from "expo";
-import Screen1 from './Components/HomeScreenIndex';
+
 export default class AwesomeApp extends Component {
   constructor() {
     super();
@@ -20,6 +20,6 @@ export default class AwesomeApp extends Component {
     if (!this.state.isReady) {
       return <Expo.AppLoading />;
     }
-    return <Screen1 />;
+  //  return <Screen1 />;
   }
 }
