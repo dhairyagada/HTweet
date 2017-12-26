@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import { Image } from 'react-native';
 import {Text,
     Left,
     Container,
@@ -6,10 +7,13 @@ import {Text,
     Content,
     Footer,
     Card,
+    CardItem,
     FooterTab,
     Button,
     View,
-    Thumbnail} from 'native-base';
+    Thumbnail,
+    Body,
+    Right} from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
 
 export default class MainScreen extends Component
@@ -37,17 +41,50 @@ export default class MainScreen extends Component
             
             </View>
             
-            <View style={{flexDirection:'row',justifyContent:'space-around', width:360}}>
+            <View style={{flexDirection:'row',justifyContent:'space-around', width:340}}>
                     
-                <Icon name="home"   />
-                <Icon name="search" />
-                <Icon name="bell"   />
-                <Icon name="mail"   />
+                <Icon name="home"   color='#5DADE2' size={18}/>
+                <Icon name="search" color='#797D7F' size={18}/>
+                <Icon name="bell"   color='#797D7F' size={18}/>
+                <Icon name="mail"   color='#797D7F' size={18}/>
 
             </View>
         </Header>
         
-        <Content/>
+        <Content>
+                <Card>
+                    <CardItem>
+                        <Left>
+                            <Thumbnail source={require('./Images/User1.jpg')} />
+                            <Body>
+                                <Text> Madara Uchiha        </Text>
+                                <Text note>@UchihaMadara    </Text>
+                            </Body>
+                        </Left>
+                        <Right>
+                            <Text note>30 mins ago</Text>
+                        </Right>
+                    </CardItem>
+
+                    <CardItem>
+                        <Body>
+                            <Text>Manga Drawing of Madara Uchiha</Text>
+                            <Image source={require('./Images/User1Post.jpg')}/>
+                        </Body>
+                    </CardItem>
+
+                    <CardItem >
+                    <Left style={{flex:1}}/>
+                    <Body style={{flexDirection:'row',justifyContent:'space-around',flex:6}}>
+                    <Icon name="repeat"   color='#5DADE2' size={18}/>
+                    <Icon name="message-square" color='#797D7F' size={18}/>
+                    <Icon name="heart"   color='#797D7F' size={18}/>
+                    <Icon name="mail"   color='#797D7F' size={18}/>  
+                    </Body>
+                    </CardItem>
+
+                </Card>
+        </Content>
 
         <Footer style={{height:45}} >
                 <FooterTab style={{backgroundColor:'#FFFFFF'}}>
