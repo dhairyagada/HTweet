@@ -18,21 +18,33 @@ export default class MainScreen extends Component
     {
         return(
         <Container>
-        <Header style={{backgroundColor:'#FFFFFF',marginTop:25}}>
-            <View style={{flexDirection:'row'}}>
+        <Header style={{backgroundColor:'#FFFFFF',
+                        marginTop:25,
+                        flexDirection:'column',
+                        justifyContent:'space-around',
+                        height:120}}>
+            <View style={{flexDirection:'row',justifyContent:'flex-start', width:360}}>
             
                 <Thumbnail source={require('./Images/ProfilePic.jpg')} size={10} />
 
                 <Text style={{  alignSelf:'center',
                                 fontWeight:'bold', 
                                 fontSize:15 , 
-                                
+                                paddingLeft:10
                                 }}> 
                          Home 
                 </Text>
             
             </View>
-        
+            
+            <View style={{flexDirection:'row',justifyContent:'space-around', width:360}}>
+                    
+                <Icon name="home"   />
+                <Icon name="search" />
+                <Icon name="bell"   />
+                <Icon name="mail"   />
+
+            </View>
         </Header>
         
         <Content/>
