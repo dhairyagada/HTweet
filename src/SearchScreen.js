@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
 import StyleSheet from 'react-native';
-import {Container,Header,Input,Item,Button,Text,Content,Footer,FooterTab} from 'native-base';
+import {Container,Header,Input,Item,Button,Text,Content,Footer,FooterTab,Left} from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
 
 export default class SearchScreen extends Component
-{
+{   
+   
     render()
     {
         return(
@@ -12,7 +13,12 @@ export default class SearchScreen extends Component
             <Container>
 
                 <Header searchBar style={{backgroundColor:'#F0F3F4',marginTop:25}}>
-                    <Item>
+                    <Left style={{flex:1}}>
+                        <Button transparent onPress={() => navigation.goBack()}>
+                            <Icon name="arrow-left" color='#AED6F1' size={20}/>
+                        </Button>
+                    </Left>
+                    <Item style={{flex:8}}>
                         <Input placeholder="Search Twitter" style={{backgroundColor:'#F0F3F4'}} />
                     </Item>
                 </Header>
@@ -41,4 +47,3 @@ export default class SearchScreen extends Component
         );
     }
 }
-
