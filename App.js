@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Expo from "expo";
-
+import SearchScreeen from './src/SearchScreen'
 export default class AwesomeApp extends Component {
   constructor() {
     super();
@@ -21,5 +21,6 @@ export default class AwesomeApp extends Component {
       return <Expo.AppLoading />;
     }
   //  return <Screen1 />;
+      return <SearchScreeen />;
   }
 }
