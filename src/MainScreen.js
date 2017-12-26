@@ -57,29 +57,45 @@ export default class MainScreen extends Component
                         <Left>
                             <Thumbnail source={require('./Images/User1.jpg')} />
                             <Body>
-                                <Text> Madara Uchiha        </Text>
-                                <Text note>@UchihaMadara    </Text>
+                                <Text> Madara Uchiha</Text>
+                                <Text note>@UchihaMadara</Text>
                             </Body>
                         </Left>
                         <Right>
                             <Text note>30 mins ago</Text>
                         </Right>
                     </CardItem>
-
+                    <CardItem>
+                    <Left style={{flex:1}}/>
+                    <Body style={{flex:4}}>
+                    <Text >Fan Art of Madara Uchiha</Text>
+                    </Body>
+                    </CardItem>
                     <CardItem>
                         <Body>
-                            <Text>Manga Drawing of Madara Uchiha</Text>
-                            <Image source={require('./Images/User1Post.jpg')}/>
+                            <Image source={require('./Images/User1Post.jpg')} resizeMode='contain' 
+                            style={{paddingRight:20,width:400,height:200,alignSelf:'flex-start'}}/>
                         </Body>
                     </CardItem>
 
                     <CardItem >
                     <Left style={{flex:1}}/>
-                    <Body style={{flexDirection:'row',justifyContent:'space-around',flex:6}}>
-                    <Icon name="repeat"   color='#5DADE2' size={18}/>
-                    <Icon name="message-square" color='#797D7F' size={18}/>
-                    <Icon name="heart"   color='#797D7F' size={18}/>
-                    <Icon name="mail"   color='#797D7F' size={18}/>  
+                    <Body style={{flexDirection:'row',justifyContent:'space-around',flex:4}}>
+                    <Button transparent style={{flex:1}} size={10}>
+                        <Icon name="repeat"   color='#797D7F' size={18}/>
+                        <Text note style={{paddingLeft:2}}>2</Text>
+                    </Button>
+                    <Button transparent style={{flex:1}}>
+                        <Icon name="message-square" color='#797D7F' size={18}/>
+                        <Text note style={{paddingLeft:2}}>60</Text>
+                    </Button>
+                    <Button transparent style={{flex:1}}>
+                        <Icon name="heart"   color='#797D7F' size={18}/>
+                        <Text note style={{paddingLeft:2}}>19</Text>
+                    </Button>
+                    <Button transparent style={{flex:1}}>
+                        <Icon name="mail"   color='#797D7F' size={18}/>  
+                    </Button>
                     </Body>
                     </CardItem>
 

@@ -22,7 +22,7 @@ export default class AwesomeApp extends Component {
       return <Expo.AppLoading />;
     }
   //  return <Screen1 />;
-   //   return <SearchScreeen />;
+  //  return <SearchScreeen />;
       return <MainScreen />
   }
 }
