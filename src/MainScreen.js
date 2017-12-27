@@ -111,6 +111,58 @@ export default class MainScreen extends Component
                     </CardItem>
 
                 </Card>
+
+                <Card>
+                    {/*} CardItem1 */}
+                    <CardItem>
+                        <Left>
+                            <Thumbnail source={require('./Images/User2.jpg')} />
+                            <Body>
+                                <Text>Akatsuki</Text>
+                                <Text note>@Akatsuki</Text>
+                            </Body>
+                        </Left>
+                        <Right>
+                            <Text note>45 mins ago</Text>
+                        </Right>
+                    </CardItem>
+                     {/*} CardItem2 */}
+                    <CardItem>
+                    <Left style={sty.cardItem2Left}/>
+                    <Body style={sty.cardItem2Body}>
+                    <Text >A group picture of Akatsuki</Text>
+                    </Body>
+                    </CardItem>
+                     {/*} CardItem3 */}
+                    <CardItem>
+                        <Body>
+                            <Image source={require('./Images/User2Post.png')} resizeMode='contain' 
+                            style={sty.cardItem3Image}/>
+                        </Body>
+                    </CardItem>
+                     {/*} CardItem4 */}
+                    <CardItem >
+                    <Left style={sty.cardItem4Left}/>
+                    <Body style={sty.cardItem4Body}>
+                    <Button transparent style={sty.cardItem4Button} >
+                        <Icon name="repeat"  style={sty.cardItem4Icon} />
+                        <Text note style={sty.cardItem4note}>2</Text>
+                    </Button>
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="message-square" style={sty.cardItem4Icon}/>
+                        <Text note style={sty.cardItem4note}>60</Text>
+                    </Button>
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="heart"   style={sty.cardItem4Icon}/>
+                        <Text note style={sty.cardItem4note}>19</Text>
+                    </Button>
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="mail"   style={sty.cardItem4Icon}/>  
+                    </Button>
+                    </Body>
+                    </CardItem>
+
+                </Card>
         </Content>
 
         <Footer style={{height:45}} >
