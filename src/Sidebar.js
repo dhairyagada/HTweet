@@ -2,9 +2,11 @@ import React,{Component} from 'react';
 import { AppRegistry,StatusBar} from "react-native";
 import {Container,
         Content,
+        Footer,
         Thumbnail,
         Text,
         Left,
+        Right,
         List,
         Button,
         Header,
@@ -32,6 +34,7 @@ export default class SideBar extends Component{
                   </View>
 
                 </Header>
+
                 <Content>
                 <List>
                   <ListItem noBorder >
@@ -58,6 +61,14 @@ export default class SideBar extends Component{
                   </ListItem>
                 </List>
                 </Content>
+                <Footer style={sty.FooterStyle}>
+                  <Left> 
+                    <Icon name="moon" color='#5DADE2'style={sty.FooterIconStyle} /> 
+                  </Left>
+                  <Right> 
+                    <Icon name="grid" color='#5DADE2'style={sty.FooterIconStyle} /> 
+                  </Right>
+                </Footer>
             </Container>
         )
     }
@@ -77,5 +88,12 @@ const sty=StyleSheet.create({
       },
       ListItemTextStyle:{
         paddingLeft:10
+      },
+      FooterStyle:{
+        backgroundColor:'#FFFFFF',
+      },
+      FooterIconStyle:{
+        fontSize:20,
+        padding:10
       }
 });
