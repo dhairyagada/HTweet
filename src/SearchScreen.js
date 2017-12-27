@@ -14,7 +14,7 @@ export default class SearchScreen extends Component
 
                 <Header searchBar style={{backgroundColor:'#F0F3F4',marginTop:25}}>
                     <Left style={{flex:1}}>
-                        <Button transparent onPress={() => navigation.goBack()}>
+                    <Button transparent onPress={() => this.props.navigation.navigate("Home")}>
                             <Icon name="arrow-left" color='#AED6F1' size={20}/>
                         </Button>
                     </Left>

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Image } from 'react-native';
+import {AppRegistry, Image,StatusBar } from 'react-native';
 import {Text,
     Left,
     Container,
@@ -15,6 +15,7 @@ import {Text,
     Body,
     Right} from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
+
 
 export default class MainScreen extends Component
 {
@@ -42,12 +43,18 @@ export default class MainScreen extends Component
             </View>
             
             <View style={{flexDirection:'row',justifyContent:'space-around', width:340}}>
-                    
-                <Icon name="home"   color='#5DADE2' size={18}/>
+                <Button transparent >   
+                <Icon name="home"   color='#5DADE2' size={18}/> 
+                </Button>
+                <Button transparent onPress={() => this.props.navigation.navigate("Search")}>
                 <Icon name="search" color='#797D7F' size={18}/>
+                </Button>
+                <Button transparent >
                 <Icon name="bell"   color='#797D7F' size={18}/>
+                </Button>
+                <Button transparent >
                 <Icon name="mail"   color='#797D7F' size={18}/>
-
+                </Button>
             </View>
         </Header>
         

@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import Expo from "expo";
 import SearchScreeen from './src/SearchScreen';
-import MainScreen from './src/MainScreen';
+import MainScreen from './src/MainIndex';
+import SideBar from './src/SideBar';
+
+import { View } from "react-native";
+import { Container, Content, Picker, Button, Text } from "native-base";
 export default class AwesomeApp extends Component {
   constructor() {
     super();
@@ -24,5 +28,6 @@ export default class AwesomeApp extends Component {
   //  return <Screen1 />;
   //  return <SearchScreeen />;
       return <MainScreen />
+    
   }
 }
