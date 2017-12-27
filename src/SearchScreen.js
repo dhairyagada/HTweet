@@ -24,22 +24,22 @@ export default class SearchScreen extends Component
                 </Header>
 
                 <Content style={{backgroundColor:'#AED6F1'}}>
-               
                 </Content>
-                <Footer style={{height:45}} >
-                <FooterTab style={{backgroundColor:'#FFFFFF'}}>
-                    <Button style={{flex:1}}>
-                        <Text   style={{fontSize:16,color:'#000000'}}> All </Text>
-                    </Button>
 
-                    <Button style={{flex:2}}>
-                        <Text   style={{fontSize:16,color:'#000000'}}> Mentions </Text>
-                    </Button>
-                    <Button style={{flex:1}}/>
-                    <Button style={{flex:1}}>
-                        <Icon name="settings" color='#2874A6' size={20} />
-                    </Button>
-                </FooterTab>
+                <Footer style={{height:45}} >
+                    <FooterTab style={{backgroundColor:'#FFFFFF'}}>
+                        <Button style={{flex:1}}>
+                            <Text   style={{fontSize:16,color:'#000000'}}> All </Text>
+                        </Button>
+
+                        <Button style={{flex:2}}>
+                            <Text   style={{fontSize:16,color:'#000000'}}> Mentions </Text>
+                        </Button>
+                        <Button style={{flex:1}}/>
+                        <Button style={{flex:1}}>
+                            <Icon name="settings" color='#2874A6' size={20} />
+                        </Button>
+                    </FooterTab>
                 </Footer>
                
             </Container>

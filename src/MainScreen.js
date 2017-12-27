@@ -185,36 +185,37 @@ export default class MainScreen extends Component
     }
 }
 
-const sty=StyleSheet.create({
- //CardItem2
-    cardItem2Left:{
-     flex:1
- },
-    cardItem2Body:{
-     flex:4
- },
-//CardItem3
-    cardItem3Image:{
-        paddingRight:20,
-        width:400,
-        height:200,
-        alignSelf:'flex-start'
-    },
-//CardItem4
-    cardItem4Left:{
-        flex:1},
-    cardItem4Body:{
-        flexDirection:'row',
-        justifyContent:'space-around',
-        flex:4},
-    cardItem4Button:{
+const sty=StyleSheet.create(
+{
+    //CardItem2
+        cardItem2Left:{
         flex:1
     },
-    cardItem4Icon:{
-        color:'#797D7F',
-        fontSize:18
+        cardItem2Body:{
+        flex:4
     },
-    cardItem4note:{
-        paddingLeft:2
-    }
+    //CardItem3
+        cardItem3Image:{
+            paddingRight:20,
+            width:400,
+            height:200,
+            alignSelf:'flex-start'
+        },
+    //CardItem4
+        cardItem4Left:{
+            flex:1},
+        cardItem4Body:{
+            flexDirection:'row',
+            justifyContent:'space-around',
+            flex:4},
+        cardItem4Button:{
+            flex:1
+        },
+        cardItem4Icon:{
+            color:'#797D7F',
+            fontSize:18
+        },
+        cardItem4note:{
+            paddingLeft:2
+        }
 });

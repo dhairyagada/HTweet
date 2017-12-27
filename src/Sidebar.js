@@ -15,12 +15,11 @@ import {Container,
 import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-
-
 export default class SideBar extends Component{
     render(){
         return(
             <Container>
+
                 <Header style={sty.HeaderStyle}>
                   
                   <Thumbnail source={require('./Images/ProfilePic.jpg')} size={10}/>
@@ -36,31 +35,32 @@ export default class SideBar extends Component{
                 </Header>
 
                 <Content>
-                <List>
-                  <ListItem noBorder >
-                    <Icon name="user" />
-                    <Text style={sty.ListItemTextStyle}> Profile </Text>
-                  </ListItem>
-                  <ListItem noBorder>
-                    <Icon name="list" />
-                    <Text style={sty.ListItemTextStyle}> Lists </Text>
-                  </ListItem>
-                  <ListItem noBorder >
-                    <Icon name="zap" />
-                    <Text style={sty.ListItemTextStyle}> Moments </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Icon name="copy" />
-                    <Text style={sty.ListItemTextStyle}> Highlights </Text>
-                  </ListItem>
-                  <ListItem noBorder>
-                    <Text> Settings and Privacy </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text> Help Centre </Text>
-                  </ListItem>
-                </List>
+                  <List>
+                    <ListItem noBorder >
+                      <Icon name="user" />
+                      <Text style={sty.ListItemTextStyle}> Profile </Text>
+                    </ListItem>
+                    <ListItem noBorder>
+                      <Icon name="list" />
+                      <Text style={sty.ListItemTextStyle}> Lists </Text>
+                    </ListItem>
+                    <ListItem noBorder >
+                      <Icon name="zap" />
+                      <Text style={sty.ListItemTextStyle}> Moments </Text>
+                    </ListItem>
+                    <ListItem>
+                      <Icon name="copy" />
+                      <Text style={sty.ListItemTextStyle}> Highlights </Text>
+                    </ListItem>
+                    <ListItem noBorder>
+                      <Text> Settings and Privacy </Text>
+                    </ListItem>
+                    <ListItem>
+                      <Text> Help Centre </Text>
+                    </ListItem>
+                  </List>
                 </Content>
+
                 <Footer style={sty.FooterStyle}>
                   <Left> 
                     <Icon name="moon" color='#5DADE2'style={sty.FooterIconStyle} /> 
@@ -69,12 +69,14 @@ export default class SideBar extends Component{
                     <Icon name="grid" color='#5DADE2'style={sty.FooterIconStyle} /> 
                   </Right>
                 </Footer>
+
             </Container>
         )
     }
 }
 
-const sty=StyleSheet.create({
+const sty=StyleSheet.create(
+  {
       HeaderStyle:{backgroundColor:'#FFFFFF',
       marginTop:25,
       flexDirection:'column',
@@ -96,4 +98,4 @@ const sty=StyleSheet.create({
         fontSize:20,
         padding:10
       }
-});
+  });
