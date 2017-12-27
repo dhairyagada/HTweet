@@ -14,6 +14,7 @@ import {Text,
     Thumbnail,
     Body,
     Right} from 'native-base';
+import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 
@@ -60,6 +61,7 @@ export default class MainScreen extends Component
         
         <Content>
                 <Card>
+                    {/*} CardItem1 */}
                     <CardItem>
                         <Left>
                             <Thumbnail source={require('./Images/User1.jpg')} />
@@ -72,36 +74,38 @@ export default class MainScreen extends Component
                             <Text note>30 mins ago</Text>
                         </Right>
                     </CardItem>
+                     {/*} CardItem2 */}
                     <CardItem>
-                    <Left style={{flex:1}}/>
-                    <Body style={{flex:4}}>
+                    <Left style={sty.cardItem2Left}/>
+                    <Body style={sty.cardItem2Body}>
                     <Text >Fan Art of Madara Uchiha</Text>
                     </Body>
                     </CardItem>
+                     {/*} CardItem3 */}
                     <CardItem>
                         <Body>
                             <Image source={require('./Images/User1Post.jpg')} resizeMode='contain' 
-                            style={{paddingRight:20,width:400,height:200,alignSelf:'flex-start'}}/>
+                            style={sty.cardItem3Image}/>
                         </Body>
                     </CardItem>
-
+                     {/*} CardItem4 */}
                     <CardItem >
-                    <Left style={{flex:1}}/>
-                    <Body style={{flexDirection:'row',justifyContent:'space-around',flex:4}}>
-                    <Button transparent style={{flex:1}} size={10}>
-                        <Icon name="repeat"   color='#797D7F' size={18}/>
-                        <Text note style={{paddingLeft:2}}>2</Text>
+                    <Left style={sty.cardItem4Left}/>
+                    <Body style={sty.cardItem4Body}>
+                    <Button transparent style={sty.cardItem4Button} >
+                        <Icon name="repeat"  style={sty.cardItem4Icon} />
+                        <Text note style={sty.cardItem4note}>2</Text>
                     </Button>
-                    <Button transparent style={{flex:1}}>
-                        <Icon name="message-square" color='#797D7F' size={18}/>
-                        <Text note style={{paddingLeft:2}}>60</Text>
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="message-square" style={sty.cardItem4Icon}/>
+                        <Text note style={sty.cardItem4note}>60</Text>
                     </Button>
-                    <Button transparent style={{flex:1}}>
-                        <Icon name="heart"   color='#797D7F' size={18}/>
-                        <Text note style={{paddingLeft:2}}>19</Text>
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="heart"   style={sty.cardItem4Icon}/>
+                        <Text note style={sty.cardItem4note}>19</Text>
                     </Button>
-                    <Button transparent style={{flex:1}}>
-                        <Icon name="mail"   color='#797D7F' size={18}/>  
+                    <Button transparent style={sty.cardItem4Button}>
+                        <Icon name="mail"   style={sty.cardItem4Icon}/>  
                     </Button>
                     </Body>
                     </CardItem>
@@ -128,3 +132,37 @@ export default class MainScreen extends Component
         );
     }
 }
+
+const sty=StyleSheet.create({
+ //CardItem2
+    cardItem2Left:{
+     flex:1
+ },
+    cardItem2Body:{
+     flex:4
+ },
+//CardItem3
+    cardItem3Image:{
+        paddingRight:20,
+        width:400,
+        height:200,
+        alignSelf:'flex-start'
+    },
+//CardItem4
+    cardItem4Left:{
+        flex:1},
+    cardItem4Body:{
+        flexDirection:'row',
+        justifyContent:'space-around',
+        flex:4},
+    cardItem4Button:{
+        flex:1
+    },
+    cardItem4Icon:{
+        color:'#797D7F',
+        fontSize:18
+    },
+    cardItem4note:{
+        paddingLeft:2
+    }
+});
