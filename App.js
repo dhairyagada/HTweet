@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Expo from "expo";
 import SearchScreeen from './src/SearchScreen';
 import MainScreen from './src/MainIndex';
-import SideBar from './src/SideBar';
+
 
 import { View } from "react-native";
 import { Container, Content, Picker, Button, Text } from "native-base";
