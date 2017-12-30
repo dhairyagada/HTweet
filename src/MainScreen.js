@@ -6,6 +6,7 @@ import {Text,
     Header,
     Content,
     Footer,
+    Fab,
     Card,
     CardItem,
     FooterTab,
@@ -19,7 +20,14 @@ import Icon from 'react-native-vector-icons/Feather';
 
 
 export default class MainScreen extends Component
-{
+{   
+        constructor() 
+        {
+            super();
+            this.state = {
+            active: true,
+            };
+        }
     render()
     {
         return(
@@ -164,6 +172,14 @@ export default class MainScreen extends Component
 
                 </Card>
         </Content>
+        
+        <Fab
+            active={this.state.active}
+            style={{ backgroundColor: '#5DADE2',marginBottom:30 }}
+            position="bottomRight"
+            onPress={() => this.setState({ active:!this.state.active })}>
+            <Icon name="feather" />
+            </Fab>
 
         <Footer style={{height:45}} >
                 <FooterTab style={{backgroundColor:'#FFFFFF'}}>
